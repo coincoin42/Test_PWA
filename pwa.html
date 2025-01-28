@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <h1>Oh, my lovely website</h1>
+  <ul>
+    <li><img src="imgs/a.jpg" alt=""></li>
+    <li><img src="imgs/b.jpg" alt=""></li>
+    <li><img src="imgs/c.jpg" alt=""></li>
+    <li><img src="imgs/d.jpg" alt=""></li>
+  </ul>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('sw.js')
+        .then(() => console.log('Service worker enregistré avec succès'))
+        .catch((error) => console.error('Erreur lors de l\'enregistrement du service worker', error));
+    }
+  </script>
+  
+</body>
+</html>
